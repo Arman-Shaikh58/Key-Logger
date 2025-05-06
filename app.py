@@ -115,6 +115,21 @@ def get_data():
         return jsonify({"status": "success", "message": "Data saved"}), 200
     else:
         return jsonify({"status": "ignored", "message": "Empty keyboardData"}), 204
+@app.route('/testing/students')
+def testing1():
+    data = [
+    {'rollno': 1, 'name': 'asa', 'marks': 30},
+    {'rollno': 2, 'name': 'bhuvan', 'marks': 45},
+    {'rollno': 3, 'name': 'charu', 'marks': 78},
+    {'rollno': 4, 'name': 'deep', 'marks': 66},
+    {'rollno': 5, 'name': 'esha', 'marks': 92},
+    {'rollno': 6, 'name': 'farhan', 'marks': 51},
+    {'rollno': 7, 'name': 'gita', 'marks': 37},
+    {'rollno': 8, 'name': 'harsh', 'marks': 83},
+    {'rollno': 9, 'name': 'isha', 'marks': 59},
+    {'rollno': 10, 'name': 'jatin', 'marks': 74}
+    ]
+    return jsonify(data), 200
 
 if __name__ == '__main__':
     app.run(debug=True,host="0.0.0.0", port=5000)
